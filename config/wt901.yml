@@ -23,7 +23,7 @@ witmotion:
       enabled: true
       topic_name: /temperature
       frame_id: base_link
-      from_message: magnetometer # acceleration, angular_vel, orientation, magnetometer
+      from_message: acceleration # acceleration, angular_vel, orientation, magnetometer
       variance: 0.01829
       coefficient: 1.0 # Linear calibration parameters: coefficient
       addition: 0.0 # and addendum
@@ -37,6 +37,7 @@ witmotion:
         [0.000000187123, 0.0, 0.0, 0.0, 0.000000105373, 0.0, 0.0, 0.0, 0.000000165816]
     barometer_publisher:
       enabled: false
+      # enabled: true
       topic_name: /barometer
       frame_id: base_link
       variance: 0.001
@@ -44,6 +45,7 @@ witmotion:
       addition: 0.0 # and addendum
     altimeter_publisher:
       enabled: false
+      # enabled: true
       topic_name: /altitude
       coefficient: 1.0 # Linear calibration parameters: coefficient
       addition: 0.0 # and addendum
